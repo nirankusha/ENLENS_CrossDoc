@@ -1,0 +1,111 @@
+{
+  "summary": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+  "total_claims": 1,
+  "attributions": [
+    {
+      "claim_id": 1,
+      "claim_text": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+      "evidence": [
+        {
+          "source_doc": "10.1007/978-3-030-92559-8_16 :: 10.1007_978-3-030-92559-8_16.pdf",
+          "sentence_idx": 1,
+          "sentence": "In this briefing, we examine w hy Africa is wellplaced for the development of a green hydrogen economy, and provide an overview on the various initiatives, strategies and partnerships in play across the continent.",
+          "retrieval_sim": 0.8068282008171082,
+          "ig_score": 1.0,
+          "doc_char_start": 270,
+          "doc_char_end": 483,
+          "refined_span": {
+            "char_start": 7,
+            "char_end": 198,
+            "score": 2.710072829698523,
+            "snippet": "briefing, we examine w hy Africa is wellplaced for the development of a green hydrogen economy, and provide an overview on the various initiatives, strategies and partnerships in play across"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": 1,
+      "claim_text": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+      "evidence": [
+        {
+          "source_doc": "10.1016/j.jclepro.2023.136438 :: 10.1016_j.jclepro.2023.136438.pdf",
+          "sentence_idx": 252,
+          "sentence": "The results of S-LCA reveal that green hydrogen production in South Africa poses the highest risk to most of the social indicators, especially CL, fair salary, unemployment (U), association and bargaining rights (ACE), and GW, because of the poor working conditions and the lower gross domestic product/purchasing power parity per capita compared with those of other countries.",
+          "retrieval_sim": 0.8731976747512817,
+          "ig_score": 1.0,
+          "doc_char_start": 41655,
+          "doc_char_end": 42032,
+          "refined_span": {
+            "char_start": 19,
+            "char_end": 326,
+            "score": 3.4141742005012925,
+            "snippet": "A reveal that green hydrogen production in South Africa poses the highest risk to most of the social indicators, especially CL, fair salary, unemployment (U), association and bargaining rights (ACE), and GW, because of the poor working conditions and the lower gross domestic product/purchasing power parity"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": 1,
+      "claim_text": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+      "evidence": [
+        {
+          "source_doc": "10.1016/j.jclepro.2023.136438 :: 10.1016_j.jclepro.2023.136438__dup2.pdf",
+          "sentence_idx": 252,
+          "sentence": "The results of S-LCA reveal that green hydrogen production in South Africa poses the highest risk to most of the social indicators, especially CL, fair salary, unemployment (U), association and bargaining rights (ACE), and GW, because of the poor working conditions and the lower gross domestic product/purchasing power parity per capita compared with those of other countries.",
+          "retrieval_sim": 0.8731976747512817,
+          "ig_score": 1.0,
+          "doc_char_start": 41655,
+          "doc_char_end": 42032,
+          "refined_span": {
+            "char_start": 19,
+            "char_end": 326,
+            "score": 3.4141742005012925,
+            "snippet": "A reveal that green hydrogen production in South Africa poses the highest risk to most of the social indicators, especially CL, fair salary, unemployment (U), association and bargaining rights (ACE), and GW, because of the poor working conditions and the lower gross domestic product/purchasing power parity"
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": 1,
+      "claim_text": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+      "evidence": [
+        {
+          "source_doc": "10.47604/jpid.1803 :: 10.47604_jpid.1803.pdf",
+          "sentence_idx": 242,
+          "sentence": "The Journal of Energy and Development, 401 -403.",
+          "retrieval_sim": 0.5235230922698975,
+          "ig_score": 1.0000001192092896,
+          "doc_char_start": 31297,
+          "doc_char_end": 31345,
+          "refined_span": {
+            "char_start": 0,
+            "char_end": 48,
+            "score": 2.852201734979947,
+            "snippet": "The Journal of Energy and Development, 401 -403."
+          }
+        }
+      ]
+    },
+    {
+      "claim_id": 1,
+      "claim_text": "The heavy dependence on imported equipment, technology, and expertise for green hydrogen production and end-use poses a risk of limiting the economic benefits and job opportunities that could have been generated domestically. Additionally, if investments and policies related to green hydrogen prioritize foreign entities or neglect the inclusion of local communities, it has the potential to worsen existing disparities and hinder poverty reduction efforts. In the case of Africa, green hydrogen production can pose the highest risk (red flag) to the progress towards the target due to poor working conditions and lower gross domestic product/purchasing power parity per capita compared to those of other countries. In general, the ability to manufacture key equipment within the country reduces the risk of various social indicators closely related to this target, such as fair salaries and social security expenditures.|0",
+      "evidence": [
+        {
+          "source_doc": "10.1016/j.ijhydene.2020.01.246 :: 10.1016_j.ijhydene.2020.01.246.pdf",
+          "sentence_idx": 376,
+          "sentence": "7. With a large-scale industry devoted to the production of hydrogen, we should aim at achieving very competitivecosts: from electricity at 26 V/MWh or less, from the wind in Patagonia to hydrogen local cost of 2.6 V/kg or less and, regarding exportation, 4.35 V/kg or less, taking Japan as an example destination.",
+          "retrieval_sim": 0.70362389087677,
+          "ig_score": 1.0,
+          "doc_char_start": 57047,
+          "doc_char_end": 57361,
+          "refined_span": {
+            "char_start": 0,
+            "char_end": 249,
+            "score": 2.173225729105373,
+            "snippet": "7. With a large-scale industry devoted to the production of hydrogen, we should aim at achieving very competitivecosts: from electricity at 26 V/MWh or less, from the wind in Patagonia to hydrogen local cost of 2.6 V/kg or less and, regarding export"
+          }
+        }
+      ]
+    }
+  ]
+}
