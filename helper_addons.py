@@ -207,13 +207,18 @@ def token_importance_ig(text: str, class_id: int):
         for k in range(1, steps + 1):
             alpha = float(k) / steps
             x = baseline + alpha * (inputs_embeds - baseline)
-            x.retain_grad()
+            x.requires_grad_(True)
             bert_model.zero_grad(set_to_none=True)
             out = bert_model(inputs_embeds=x, attention_mask=attn_mask).logits  # (1, num_labels)
             tgt = out[0, int(class_id) % out.shape[-1]]
-            tgt.backward(retain_graph=True)
-            if x.grad is not None:
-                total_grads = total_grads + x.grad.detach()
+            grad = torch.autograd.grad(
+                outputs=tgt,
+                inputs=x,
+                retain_graph=True,
+                allow_unused=True,
+            )[0]
+            if grad is not None:
+                total_grads = total_grads + grad.detach()
 
         avg_grads = total_grads / steps
         attributions = (inputs_embeds - baseline) * avg_grads  # (1, seq, hidden)

@@ -48,6 +48,7 @@ from flexiconc_adapter import (
     count_indices, list_index_sizes,
     build_faiss_indices,
 )
+from scico_graph_pipeline import build_graph_from_selection
 from helper_addons import build_ngram_trie
 try:
     from helper_addons import build_cooc_graph
@@ -99,9 +100,8 @@ def _init_state():
     
     ss.setdefault("sidebar_pdf_dir", "")
     ss.setdefault("sidebar_new_db_path", "")
-    ss.setdefault("sidebar_enable_cooc", _HAVE_COOCC_LOCAL)
+    ss.setdefault("sidebar_enable_cooc", False)
     ss.setdefault("sidebar_coref_mode", "trie")
-    
 _init_state()
 
 def _available_coref_devices() -> List[str]:
@@ -503,6 +503,7 @@ def _prepare_scico_panel(
         precomputed_embeddings=precomputed_embeddings,
         embedding_provider=embedding_provider,
     )
+
 
     panel["graph"] = G
     panel["meta"] = meta
@@ -1147,8 +1148,7 @@ with st.sidebar:
         ss.setdefault("source_root", ss.get("source_root", ""))
         ss.setdefault("sidebar_pdf_dir", ss.get("sidebar_pdf_dir", ""))
         ss.setdefault("sidebar_new_db_path", ss.get("sidebar_new_db_path", ""))
-        if "sidebar_enable_cooc" not in ss:
-            ss["sidebar_enable_cooc"] = _HAVE_COOCC_LOCAL
+        ss.setdefault("sidebar_enable_cooc", ss.get("sidebar_enable_cooc", False))
         ss.setdefault("sidebar_coref_mode", ss.get("sidebar_coref_mode", "trie"))
 
         # -------- Single, canonical ingestion form ----------
@@ -1171,7 +1171,7 @@ with st.sidebar:
             with c_ingest_a:
                 ss["sidebar_enable_cooc"] = st.checkbox(
                     "Also build co-occurrence (requires SciPy)",
-                    value=ss.get("sidebar_enable_cooc", _HAVE_COOCC_LOCAL),
+                    value=ss.get("sidebar_enable_cooc", False),
                     help="If enabled (and available), export co-occurrence graph to DB.",
                     disabled=not _HAVE_COOCC_LOCAL,
                 )
@@ -1199,7 +1199,7 @@ with st.sidebar:
         if ingest_submit:
             pdf_dir_val = (ss.get("sidebar_pdf_dir") or "").strip()
             new_db_val = (ss.get("sidebar_new_db_path") or "").strip()
-            enable_cooc_sidebar = bool(ss.get("sidebar_enable_cooc", _HAVE_COOCC_LOCAL) and _HAVE_COOCC_LOCAL)
+            enable_cooc_sidebar = bool(ss.get("sidebar_enable_cooc", False) and _HAVE_COOCC_LOCAL)
             coref_mode_sidebar = (ss.get("sidebar_coref_mode") or "trie")
 
             if not pdf_dir_val:
@@ -2271,8 +2271,7 @@ with col4:
                             finally:
                                 conn.close()
 
-                        embedding_provider = _embedding_provider
-                        
+            embedding_provider = _embedding_provider
             if not prod:
                 warn_panel = {
                     "source": "doc_missing",
