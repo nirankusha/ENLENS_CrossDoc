@@ -32,7 +32,8 @@ EOF
 
 # --------------- Python dependencies ---------------
 python3 -m pip install --upgrade pip
-python3 -m pip install -r "$ROOT_DIR/requirements.txt"
+python3 -m pip install -r "$ROOT_DIR/requirements.txt" --no-deps
+
 
 # --------------- NLP resources ---------------
 python3 -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
