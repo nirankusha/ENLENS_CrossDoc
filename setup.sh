@@ -31,12 +31,12 @@ ENLENS_DATA_DIR=$ROOT_DIR/data
 EOF
 
 # --------------- Python dependencies ---------------
-python -m pip install --upgrade pip
-python -m pip install -r "$ROOT_DIR/requirements.txt"
+python3 -m pip install --upgrade pip
+python3 -m pip install -r "$ROOT_DIR/requirements.txt"
 
 # --------------- NLP resources ---------------
-python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
-python -m nltk.downloader punkt stopwords averaged_perceptron_tagger
+python3 -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
+python3 -m nltk.downloader punkt stopwords averaged_perceptron_tagger
 
 # --------------- Clone additional repositories ---------------
 echo "📦 Cloning external repositories ..."
@@ -59,16 +59,16 @@ fi
 
 # --------------- Legacy artifacts ---------------
 set +e
-python "$ROOT_DIR/download_legacy_models.py" --base-dir "$ROOT_DIR" \
+python3 "$ROOT_DIR/download_legacy_models.py" --base-dir "$ROOT_DIR" \
   || echo "⚠️ Skipping legacy model download (non-fatal). Check link/permissions."
 
-python "$ROOT_DIR/cache_hf_models.py" --cache-dir "$HF_CACHE_DIR" \
+python3 "$ROOT_DIR/cache_hf_models.py" --cache-dir "$HF_CACHE_DIR" \
   || echo "⚠️ Skipping HF cache priming (non-fatal)."
 set -e
 
 # --------------- SDG globals injection ---------------
 echo "🧭 Loading SDG target metadata from app_data/sdg_targets.json ..."
-python - <<'PY'
+python3 - <<'PY'
 import os, json, pathlib
 
 root = pathlib.Path(os.getcwd())
